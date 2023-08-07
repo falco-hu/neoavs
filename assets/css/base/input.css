@@ -1,0 +1,67 @@
+.selector{
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 8px 16px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.selector .title{
+    display: flex;
+    align-items: center;
+}
+
+.selector .title .item{
+    color: #FFF;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-right: 8px;
+    transition: all .3s;
+}
+.selector .title svg{
+    transition: all .3s;
+}
+
+.selector .data-item{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 40px;
+    width: 100%;
+}
+.selector .data-item ul{
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 4px 16px;
+    width: 100%;
+}
+.selector .data-item li{
+    margin: 4px 0;
+}
+.selector .data-item li a{
+    color: #FFF;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.selector .data-item li a:hover, .selector .data-item li a.active{ 
+    color: #00C2FF;
+}
+
+.selector:hover .data-item{
+    display: block;
+}
+.selector:hover .title svg{
+    transform: rotate(-180deg);
+}

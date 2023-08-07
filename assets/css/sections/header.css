@@ -1,0 +1,143 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 38px 0;
+ }
+
+ header .logo{
+    position: relative;
+    z-index: 20;
+ }
+ header .logo img{
+    height: 32px;
+    width: auto;
+ }
+
+header .nav-bar{
+    margin-top: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@media (min-width: 993px) {
+    header .menu > ul{
+        display: flex;
+        align-items: center;
+    }
+    header .menu > ul li{
+        margin: 0 24px 0;
+    }
+    header .menu > ul li a{
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 16px */
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+header .language-selector{
+    position: relative;
+    z-index: 20;
+}
+
+header .hamburger-menu{
+    display: none;
+    position: relative;
+    width: 22px;
+    height: 15px;
+    transition: all .6s;
+    z-index: 10;
+    cursor: pointer;
+}
+header .hamburger-menu span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all .6s;
+    position: absolute;
+    left: 0;
+}
+
+header .hamburger-menu span:nth-child(1){
+    top: 0;
+}
+header .hamburger-menu span:nth-child(2){
+    top: 13px;
+}
+
+body.mobile-menu-open header .hamburger-menu{
+    margin-top: -6px;
+}
+body.mobile-menu-open header .hamburger-menu span:nth-child(1){
+    top: 10px;
+    transform: rotate(45deg);
+}
+body.mobile-menu-open header .hamburger-menu span:nth-child(2){
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 992px) {
+    body:not(.mobile-menu-open) header .language-selector{
+        display: none;
+    }
+
+    header .hamburger-menu{
+        display: block;
+    }
+
+    header{
+        padding: 27px 0;
+     }
+    
+     header .logo img{
+        height: 24px;
+     }
+
+    header .menu{
+        position: fixed;
+        right: -110vw;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1B059E;
+        z-index: 10;
+        transition: all .6s;
+    } 
+
+    body.mobile-menu-open header .language-selector{
+        margin-right: 20px;
+    }
+    body.mobile-menu-open header .menu{
+        right: 0;
+    }
+    header .menu ul{
+        width: calc(100% - 48px);
+        height: calc(100% - 48px);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+    header .menu ul li{
+        margin: 10px 0;
+    }
+    header .menu ul li a{
+        color: #FFF;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 42px */
+        text-transform: uppercase;
+        text-align: right;
+    }
+}

@@ -1,0 +1,40 @@
+.btn{
+    padding: 16px 32px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 4px;
+    transition: all .3s;
+    border: none !important;
+}
+
+.btn.btn-small{
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.btn-white{
+    background: #ffffff;
+    color: #0E0E0E;
+}
+
+.btn-white:hover, .btn-white:active, .btn-white:focus, .btn-white:focus-visible{
+    background: #ffffff !important;
+    color: #0E0E0E !important;
+    opacity: .8 !important;
+    border: none !important;
+}
+
+.btn-purple{
+    background: #5747B8;
+    color: #ffffff;
+}
+
+.btn-purple:hover, .btn-purple:active, .btn-purple:focus, .btn-purple:focus-visible{
+    background: #5747B8 !important;
+    color: #ffffff !important;
+    opacity: .8 !important;
+    border: none !important;
+}
