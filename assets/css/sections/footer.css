@@ -40,7 +40,7 @@ footer .contact p b{
 footer .contact p .copy-clipboard{
     cursor: pointer;
 }
-footer .contact p .copy-clipboard span.content{
+footer .contact p .copy-clipboard span.content a{
     color: #D9D9D9;
     font-size: 16px;
     font-style: normal;
@@ -51,7 +51,7 @@ footer .contact p .copy-clipboard span.content{
     cursor: pointer;
 }
 
-footer .contact p .copy-clipboard span.content:after{
+footer .contact p .copy-clipboard span.content a:after{
     content: '';
     position: absolute;
     bottom: -2px;
@@ -61,7 +61,7 @@ footer .contact p .copy-clipboard span.content:after{
     transition: all .3s;
     border: 1px solid #FFF;
 }
-footer .contact p .copy-clipboard:hover span.content:after{
+footer .contact p .copy-clipboard span.content:hover a:after{
     left: 0;
     width: 100%;
     opacity: 1; 
@@ -72,7 +72,7 @@ footer .contact p .copy-clipboard .copy{
 }
 
 footer .contact p .copy-clipboard.copied .copy svg g,
-footer .contact p .copy-clipboard:hover .copy svg g{
+footer .contact p .copy-clipboard .copy:hover svg g{
     opacity: 1;
 }
 footer .contact p .copy-clipboard.copied .copy svg g path{

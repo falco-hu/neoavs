@@ -1,9 +1,9 @@
 const copyToClipBoard = (item) => {
-    var copyText = item.querySelector('.content').innerHTML;
+    var copyText = $(item).parents('.copy-clipboard').find('.content a').text();
     navigator.clipboard.writeText(copyText);
-    item.classList.add("copied");
+    $(item).parents('.copy-clipboard').addClass("copied");
     setTimeout(() => {
-        item.classList.remove("copied");
+        $(item).parents('.copy-clipboard').removeClass("copied");
     }, 2000);
 };
 
