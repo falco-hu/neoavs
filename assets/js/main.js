@@ -9,7 +9,6 @@ const copyToClipBoard = (item) => {
 
 let init_slider = false;
 const servicesSliderMobile = (init) => {
-    console.log(init, init_slider)
     if(init && !init_slider){
         $('.services .boxes').slick({
             infinite: true,
@@ -31,9 +30,20 @@ const mobileMenu = () => {
     }
 }
 
+const pageNavigation = (hash) => {
+    if(hash != '' && $(`.${hash}`).length > 0){
+        $("html, body").animate({ scrollTop:  $(`.${hash}`).offset().top});
+    }
+}
+
 (function ($) {
     $(() => {
+        pageNavigation(window.location.hash.replace('#', ''));
         servicesSliderMobile($(window).width() <= 992 ? true : false);
+    });
+    
+    $('.site-nav').on('click', function(){
+        pageNavigation($(this).attr('href').replace('#', ''));
     });
     
     $(window).on('resize', () => {
